@@ -1,0 +1,5 @@
+sessions/*
+/indent/
+/syntax/javascript.vim
+/.netrwhist
+/plugged
