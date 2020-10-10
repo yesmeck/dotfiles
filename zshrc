@@ -103,20 +103,6 @@ alias ay-unlink-all="y-linked | xargs yarn unlink && ayarn install --check-files
 alias jj='projj'
 alias dd='projj find'
 
-# http://frantic.im/notify-on-completion
-function f_notifyme {
-  LAST_EXIT_CODE=$?
-  CMD=$(fc -ln -1)
-  # No point in waiting for the command to complete
-  notifyme "$CMD" "$LAST_EXIT_CODE" &
-}
-
-function online {
-  cloudflared tunnel --url localhost:$1
-}
-
-export PS1='$(f_notifyme)'$PS1
-
 # https://help.github.com/articles/using-ssh-agent-forwarding#your-key-must-be-available-to-ssh-agent
 # ssh-add > /dev/null 2>&1
 
