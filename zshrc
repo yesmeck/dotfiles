@@ -53,7 +53,7 @@ plugins=(git-extras nvm docker)
 
 # User configuration
 
-export PATH="/usr/local/sbin:/usr/local/bin:$HOME/bin:$PATH:$HOME/Workspace/depot_tools"
+export PATH="/usr/local/sbin:/usr/local/bin:$HOME/bin:$PATH:$HOME/Workspace/depot_tools:$HOME/.local/bin"
 export PYTHONPATH=/usr/local/lib/python:$PYTHONPATH
 # export MANPATH="/usr/local/man:$MANPATH"
 source $ZSH/oh-my-zsh.sh
@@ -66,6 +66,7 @@ export ANDROID_HOME=/usr/local/Caskroom/android-platform-tools/30.0.0
 export PATH=${PATH}:${ANDROID_HOME}/tools
 export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 export PATH=${PATH}:${HOME}/flutter/bin
+export PATH=${PATH}:${HOME}/go/bin
 export REMAX_INTEGRATION_TEST_REPO=git@gitlab.alipay-inc.com:remax/integration-test.git
 
 # You may need to manually set your language environment
@@ -146,3 +147,5 @@ export NODE_EXTRA_CA_CERTS="$(mkcert -CAROOT)/rootCA.pem"
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="/usr/local/opt/postgresql@10/bin:$PATH"
 export GPG_TTY=$(tty)
+
+export PATH="/usr/local/opt/bison/bin:$PATH"
